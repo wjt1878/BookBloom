@@ -85,7 +85,7 @@ export default function ProfileScreen() {
             multiline 
             numberOfLines={3}
             onChangeText={(text) => setUser({...user, bio: text})}
-            placeholder="Tell us about yourself"
+            placeholder="Tell us about urself"
           />
         </View>
 
