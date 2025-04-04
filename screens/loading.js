@@ -21,6 +21,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFD1DC',
   },
   spinner: {
-    transform: [{ scale: 1.5 }] // Makes spinner 50% larger
+    transform: [{ scale: 1.5 }] 
   }
 });

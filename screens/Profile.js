@@ -3,10 +3,9 @@ import { View, Text, Image, TextInput, StyleSheet, TouchableOpacity, Alert } fro
 import * as ImagePicker from 'expo-image-picker';
 
 export default function ProfileScreen() {
-  // State for profile picture
   const [profilePic, setProfilePic] = useState(null);
 
-  // User data with empty fields
+  // for user data with empty fields
   const [user, setUser] = useState({
     firstName: '',
     lastName: '',
@@ -15,7 +14,7 @@ export default function ProfileScreen() {
     gender: '',
   });
 
-  // Function to pick an image from the gallery
+  // function to pick an image from the gallery
   const pickImage = async () => {
     try {
       // Request permissions first
@@ -43,7 +42,6 @@ export default function ProfileScreen() {
 
   const handleSaveProfile = () => {
     Alert.alert('Success', 'Profile saved successfully!');
-    // Here you would typically send the data to your backend
   };
 
   return (
@@ -117,7 +115,7 @@ export default function ProfileScreen() {
       <TouchableOpacity 
         style={styles.saveButton} 
         onPress={handleSaveProfile}
-        disabled={!user.firstName || !user.lastName} // Optional: disable if required fields empty
+        disabled={!user.firstName || !user.lastName} 
       >
         <Text style={styles.saveButtonText}>Save Profile</Text>
       </TouchableOpacity>
@@ -125,8 +123,6 @@ export default function ProfileScreen() {
   );
 }
 
-
-// Styles for layout
 const styles = StyleSheet.create({
   container: {
     flex: 1,
